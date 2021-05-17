@@ -3,7 +3,7 @@ title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
 baseurl:        "/blog"
 url:            "https://mertyn88.github.io"
-remote_theme:  chesterhow/tale
+remote_theme: chesterhow/tale
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
