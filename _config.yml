@@ -1,7 +1,7 @@
 # Site settings
 title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        ""
+baseurl:        "/blog"
 url:            "https://mertyn88.github.io"
 remote_theme: chesterhow/tale
 
