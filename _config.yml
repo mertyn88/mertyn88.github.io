@@ -1,7 +1,7 @@
 # Site settings
 title:          Development blog
 description:    "개발에 관련된 것을 정리하기 위한 블로그"
-baseurl:        ""
+baseurl:        "/blog"
 url:            "https://mertyn88.github.io"
 remote_theme: chesterhow/tale
 
