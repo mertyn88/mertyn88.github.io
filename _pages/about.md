@@ -1,15 +1,14 @@
 ---
 layout: post
 title: "About"
-author: "Chester"
+author: "이준명"
 permalink: /about/
 ---
 
-A friend of mine writes short stories. One sunny day, I asked if he wanted a website to showcase his works and he agreed. I decided to use GitHub Pages to host his site. That way he wouldn't have to buy a domain and a server.
+개발자로 업무를 하면서 현재까지는 공부한 내용이나, 실무를 통해 습득한 지식은 _Evernote, Notion_ 에만 기록을 해왔다.  
+해당 내용은 private하며 공유가 어렵다는 사실에 새롭게 github을 이용하여 블로그를 만들고 해당 블로그에 지금부터의 내용 및 과거의 지식을 순차적으로 작성하고자 한다.  
 
-While doing some research up on GitHub Pages, I accidentally chanced upon this _simple, blog-aware, static site generator_ called [Jekyll](https://jekyllrb.com/) which works really well with GitHub Pages. I figured it would do just fine for my friend and I set about searching for a pretty theme. I wanted a theme with a _book-ish_ vibe. Unfortunately, most of the themes were too modern. Eventually, I caved and begun working on my own theme. With the help of [Poole](https://github.com/poole/poole), the Jekyll Butler, I was able to build **Tale**.
-
-## Contribute
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
-
-Thanks for reading!
+## Java
+## Elasticsearch
+## Database
+## Linux Shell script
