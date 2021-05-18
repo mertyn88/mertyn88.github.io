@@ -1,6 +1,6 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
+title:          Development blog
+description:    "개발에 관련된 것을 정리하기 위한 블로그"
 baseurl:        ""
 url:            "https://mertyn88.github.io"
 remote_theme: chesterhow/tale
@@ -10,9 +10,9 @@ google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         이준명
+  url:          https://mertyn88.github.io
+  email:        mertyn88@gmail.com
 
 # Build settings
 markdown:       kramdown
