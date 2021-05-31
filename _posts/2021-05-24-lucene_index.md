@@ -4,13 +4,12 @@ title: "루씬 색인 예제"
 author: "이준명"
 tags: Lucene
 ---
-
 ### IndexWriter
 > lucene에서 _**색인을 담당하는 클래스**_이다. 해당 클래스를 이용하여 문서의 내용을 색인한다.
 > (해당 클래스에서는 검색된 내용을 확인은 불가능하다고 적혀있다. 나중에 검색을 담당하는 클래스에 의해서 확인이 가능해 보인다.) 
 > 
 > 파일의 형태로 저장되며 lucene의 검색저장 자료구조인 `segments`로 저장된다. 해당 자료구조는 후에 자세히 다루고자 한다.
-> 책에 적혀있는 코드를 8.6.2 version 기준으로 재 변경 하였다.
+> 책에 적혀있는 lucene **version 3.0** 코드를 _**version 8.6.2**_ 기준으로 재 변경 하였다.
 
 #### 생성자 메소드
 ```java
@@ -58,12 +57,18 @@ IndexerWriter를 초기화 해주고 초기화 설정은 StandardAnalyzer이다.
         Document doc = new Document();
         //변경코드 new Field() -> new TextField()
         //변경코드 Field.Index.NOT_ANALYZED -> 삭제됨
-        doc.add(new TextField("contents", new FileReader(file)));
+		doc.add(new TextField("contentsFile", new FileReader(file)));
+        doc.add(new StringField("contentsString", FileUtils.readFileToString(file, StandardCharsets.UTF_8), Field.Store.YES));
         doc.add(new StringField("filename", file.getName(), Field.Store.YES));
 
         return doc;
     }
 ```
+
+> _**new TextField("field", new FileReader(new File("filename))**_ 으로 사용시 Store는 Un-Store이다.
+즉, 해당 필드로 색인시, 검색필드의 역할은 가능해도 노출필드의 역할은 수행할 수 없다.!
+노출필드로 만들고 싶을 경우, new StringField("field", "file contents", Store) 의 형태가 되어야 한다.
+
 Document를 생성하여 파일의 내용, 파일의 제목을 가지는 색인 문서 설정을 한뒤에, IndexerWriter클래스에 add하여 색인한다.
 #### Field.Store([참조 링크](http://theeye.pe.kr/archives/287))
 * **Store.YES** : 인덱스를 할 값 모두를 인덱스에 저장한다. 검색결과등에서 꼭 보여야 하는 내용이라면 사용한다.
