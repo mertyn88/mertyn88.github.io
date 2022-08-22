@@ -1,0 +1,4 @@
+{% if site.logo %}
+<img class="logo" src="{{ site.logo | relative_url }}" alt="Logo">
+{% endif %}
+<h1>{{ site.title | default: site.github.repository_name }}</h1>
