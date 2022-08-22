@@ -25,7 +25,7 @@
 - layout: left
   name: data-rest ( 지표 데이터 ) API 개발
   link: /projects/라이픽_데이터_api.pdf
-  github: https://github.com/mertyn88/lific-data-rest
+  github:
   quote: >
     소비자와 업체의 각종 정보를 지표로 나타내기 위한 API
   description: |
@@ -59,7 +59,7 @@
 - layout: left
   name: Amazon EKS(Elastic Kubernetes Service) 서비스 구성
   link:
-  github: https://github.com/mertyn88/lific-k8s-config
+  github:
   quote: >
     라이픽 EKS 데이터 관련 서비스 구성
   description: |
@@ -74,7 +74,7 @@
 - layout: left
   name: 하이브 사용자 정의 함수 작성
   link:
-  github: https://github.com/mertyn88/lific-hive-udf
+  github:
   quote: >
     사용자 정의 함수
   description: |
@@ -85,7 +85,7 @@
 - layout: left
   name: Amazon EMR(Elastic MapReduce) 환경 구축
   link:
-  github: https://github.com/mertyn88/lific-emr
+  github:
   quote: >
     라이픽 EMR 환경을 구축
   description: |
@@ -97,7 +97,7 @@
 - layout: left
   name: 검색 - 사전관리자 웹 개발
   link: /projects/라이픽_사전관리자.pdf
-  github: https://github.com/mertyn88/lific-search-manager
+  github:
   quote: >
     검색서비스와 연관된 기능을 관리하는 운영자 웹 서비스
   description: |
@@ -110,7 +110,7 @@
 - layout: left
   name: 검색 - API 개발
   link: /projects/라이픽_검색API.pdf
-  github: https://github.com/mertyn88/lific-search-api
+  github:
   quote: >
     라이픽에서 취급하는 업체, 상품, 스탭정보에 대해 여러 조건의 검색서비스가 가능하도록 검색요청을 하는 서비스
   description: |

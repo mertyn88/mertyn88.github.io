@@ -1,15 +1,18 @@
-<header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
-  <div>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <span class="fs-4 fw-bold">{{ site.title }}</span>
-    </a>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <span>{{ site.description }}</span>
-    </a>
-  </div>
-  <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-    {% for item in site.data.settings.menu %}
-      <a class="me-3 py-2 text-decoration-none" href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a>
-    {% endfor %}
-  </nav>
-</header>
+{% if site.logo %}
+    <div class="header-title">
+        {% include header-title.html %}
+    </div>
+    <div class="header-title-mobile">
+        <section>
+        {% include header-title.html %}
+        </section>
+    </div>
+{% else %}
+    {% include header-title.html %}
+{% endif %}
+
+
+<p>{{ site.description | default: site.github.project_tagline }}</p>
+<p class="view"><a href="{{ site.repository_url }}">View the Project on GitHub<br><small>{{ site.repository_url }}</small></a></p>
+
+{% include sidebar.html %}
