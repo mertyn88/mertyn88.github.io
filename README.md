@@ -1,5 +1,12 @@
 # 이준명 포트폴리오
-> 사용테마 정보
+`Ruby`기반의 정적 웹사이트 생성기인 `jekyll`을 이용하여 작성한 포트폴리오이다  
+참고한 테마는 다음과 같다
+
+## Main Design
+https://github.com/LeNPaul/academic
+
+## Navigation Design (Top, Left)
+https://github.com/vaibhavvikas/jekyll-theme-minimalistic
 
 ---
 

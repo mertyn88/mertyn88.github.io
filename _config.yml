@@ -1,4 +1,37 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Liam`s Portfolio" # the name of your site, e.g. ACME Corp.
-description: "Search & Data Engineer"
+description: "안녕하세요 검색개발자 이준명입니다<br>반가워요! <br><br> <i class='fa-solid fa-envelope'></i>&nbsp;mertyn88@gmail.com <br> <i class='fa fa-phone' aria-hidden='true'></i>&nbsp;010-8714-8419"
+# Add
+logo: /assets/img/logo.jpg
+repository_url: https://github.com/mertyn88/mertyn88.github.io
+
+platforms:
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/mertyn88
+  - name: LinkedIn
+    icon: <i class="fa-brands fa-linkedin"></i>
+    link: www.linkedin.com/in/mertyn88
+  - name: Blog
+    icon: <i class="fas fa-blog"></i>
+    link: https://velog.io/@mertyn88
+
+navigation:
+  - name: About Me
+    link: ./index.html#id_aboutme
+  - name: Experience
+    link: ./index.html#id_experience
+  - name: Skills
+    link: ./index.html#id_skills
+  - name: Achievement
+    link: ./index.html#id_achievement
+    sublist:
+      - name: Lific
+        link: ./index.html#id_lific
+      - name: Homeplus
+        link: ./index.html#id_homeplus
+      - name: Wisenut
+        link: ./index.html#id_wisenut
+  - name: History
+    link: ./index.html#id_history
