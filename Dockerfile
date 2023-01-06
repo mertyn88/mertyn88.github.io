@@ -22,6 +22,7 @@ RUN gem install bundler
 
 # Set git
 RUN git clone https://github.com/mertyn88/mertyn88.github.io.git
+RUN git checkout -t origin/webrick_16
 # RUN cd mertyn88.github.io
 
 # Set jekyll
