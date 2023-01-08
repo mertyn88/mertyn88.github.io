@@ -4,10 +4,13 @@
     </div>
     <p style="margin-top: 5px;">
         {%- if include.item.link -%}
-            <a href="{{ include.item.link }}">[ 프로젝트 상세 ]</a>
+            <a target="_blank" href="{{ include.item.link }}">[ 프로젝트 상세 ]</a>
         {%- endif -%}
         {%- if include.item.github -%}
-            <a href="{{ include.item.github }}">[ Github ]</a>
+            <a target="_blank" href="{{ include.item.github }}">[ Github ]</a>
+        {%- endif -%}
+        {%- if include.item.drawio -%}
+            <a target="_blank" href="{{ include.item.drawio }}">[ Drawio ]</a>
         {%- endif -%}
     </p>
     <div class="col-md-10" style="margin-top: 10px;">

@@ -1,0 +1,33 @@
+- layout: left
+  name: 개발 환경
+  link:
+  quote: >
+    프로젝트 개발 Version
+  description: |
+    * Java Version : <b>1.8</b>
+    * Python Version : <b>3.9</b>
+    * ElasticSearch Version : <b>7.13.4</b>
+    * Oracle : <b>Unkown</b>
+
+- layout: left
+  name: 연관검색어 서비스 배치 개발
+  link: /projects/하나투어_연관검색어.pdf
+  github: 
+  drawio: /projects/하나투어_연관검색어.drawio.png
+  quote: >
+    검색로그와 상품 데이터 매칭을 통해 연관검색어 서비스 구축
+  description: | 
+    * Key-BERT를 사용하여 상품의 주제 키워드를 추출하고 연관성 도출
+    * BoW(Bag of Word)로 순서가 없는 빈도(Frequency)로 특정점수(0.2) 이상의 데이터만 후보군으로 산출
+
+
+- layout: left
+  name: 연관검색어 서비스 어드민 메뉴 개발
+  link: 
+  github:
+  quote: >
+    연관검색어 서비스에서 수동으로 등록되는 단어 조절
+  description: |
+    * 화이트 / 블랙 리스트 구분
+    * 학습된 연관검색어를 색인시, 화이트 / 블랙 리스트에 따라서 색인 단어 컨트롤
+
