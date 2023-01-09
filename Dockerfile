@@ -2,7 +2,7 @@ FROM debian:latest
 
 # Ruby, Git , Locale, Vim, SSH install
 RUN apt update
-RUN apt -y install ruby-full build-essential zlib1g-dev git locales locales-all vim net-tools openssh-server
+RUN apt -y install ruby-full build-essential zlib1g-dev git locales locales-all vim net-tools openssh-server curl
 
 # Set ssh
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
@@ -19,6 +19,10 @@ RUN echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 # Jekyll install
 RUN gem install jekyll -v 4.2
 RUN gem install bundler
+
+# Git config
+RUN git config --global user.email "mertyn88@gmail.com"
+RUN git config --global user.name "mertyn88"
 
 # Git clone
 RUN git clone https://github.com/mertyn88/mertyn88.github.io.git
@@ -48,3 +52,6 @@ CMD export LANG=ko_KR.UTF-8;export LC_ALL=ko_KR.UTF-8;./run.sh
 
 # Build image
 # docker build -t mertyn88/portfolio .
+
+# SSH connect
+# ssh root@127.0.0.1 -p 422
