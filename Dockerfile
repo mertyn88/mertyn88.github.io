@@ -27,7 +27,7 @@ RUN git clone https://github.com/mertyn88/mertyn88.github.io.git
 RUN echo '#!/bin/sh' >> ./run.sh
 RUN echo 'service ssh start' >> ./run.sh
 RUN echo 'cd mertyn88.github.io' >> ./run.sh
-RUN echo 'git checkout -t origin/webrick_16' >> ./run.sh
+# RUN echo 'git checkout -t origin/webrick_16' >> ./run.sh
 RUN echo 'jekyll build' >> ./run.sh
 RUN echo 'jekyll serve --host 0.0.0.0 --port 4000 --force_polling --drafts --livereload --trace' >> ./run.sh
 RUN chmod -R 777 ./run.sh
