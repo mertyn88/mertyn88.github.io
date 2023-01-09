@@ -43,6 +43,9 @@ CMD export LANG=ko_KR.UTF-8;export LC_ALL=ko_KR.UTF-8;./run.sh
 # Exec root
 # docker exec -it $(docker ps -aqf 'name=portfolio') /bin/sh -c 'cd mertyn88.github.io;export LANG=ko_KR.UTF-8;eval $(grep ^$(id -un): /etc/passwd | cut -d : -f 7-)'
 
+# SSH root
+# ssh root@127.0.0.1 -p 422
+
 # Run command
 # jekyll serve --host 0.0.0.0 --port 4000
 
