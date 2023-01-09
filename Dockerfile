@@ -1,52 +1,50 @@
 FROM debian:latest
 
+# Ruby, Git , Locale, Vim, SSH install
 RUN apt update
-RUN apt -y install ruby-full build-essential zlib1g-dev git locales locales-all vim
+RUN apt -y install ruby-full build-essential zlib1g-dev git locales locales-all vim net-tools openssh-server
 
-# Set language korean
-#RUN export LANG=ko_KR.UTF-8
-#RUN export LC_ALL=ko_KR.UTF-8
+# Set ssh
+RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
+RUN echo 'ChallengeResponseAuthentication no' >> /etc/ssh/sshd_config
+RUN echo 'UsePAM no' >> /etc/ssh/sshd_config
+RUN echo "root:root" | chpasswd
 
-#RUN echo 'LANG=ko_KR.UTF-8' >> /etc/profile
-#RUN echo 'LC_ALL=ko_KR.UTF-8' >> /etc/profile
-
-# Set ruby
+# Set ruby path
 RUN echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 RUN echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 RUN echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-# RUN source ~/.bashrc
 
-# Set jekyll
+# Jekyll install
 RUN gem install jekyll -v 4.2
 RUN gem install bundler
 
-# Set git
+# Git clone
 RUN git clone https://github.com/mertyn88/mertyn88.github.io.git
-# RUN cd mertyn88.github.io
-
-# Set jekyll
-# RUN jekyll build
-
 
 # Make shell
 RUN echo '#!/bin/sh' >> ./run.sh
+RUN echo 'service ssh start' >> ./run.sh
 RUN echo 'cd mertyn88.github.io' >> ./run.sh
 RUN echo 'git checkout -t origin/webrick_16' >> ./run.sh
 RUN echo 'jekyll build' >> ./run.sh
 RUN echo 'jekyll serve --host 0.0.0.0 --port 4000 --force_polling --drafts --livereload --trace' >> ./run.sh
 RUN chmod -R 777 ./run.sh
 
-# CMD ["jekyll", "serve", "--host", "0.0.0.0", "--port", "4000", "--force_polling", "--drafts", "--livereload", "--trace"]
+# Set language korean & shell
 CMD export LANG=ko_KR.UTF-8;export LC_ALL=ko_KR.UTF-8;./run.sh
 
-# Run container
-# docker run -it -p 4000:4000 debian /bin/bash
-# docker run -d -p 4000:4000 mertyn88/portfolio
+# Command list =======================
 
+# Run container
+# docker run -d -p 4000:4000 -p 422:22 --name portfolio mertyn88/portfolio
+
+# Exec root
+# docker exec -it $(docker ps -aqf 'name=portfolio') /bin/sh -c 'cd mertyn88.github.io;export LANG=ko_KR.UTF-8;eval $(grep ^$(id -un): /etc/passwd | cut -d : -f 7-)'
 
 # Run command
 # jekyll serve --host 0.0.0.0 --port 4000
-
 
 # Build image
 # docker build -t mertyn88/portfolio .
