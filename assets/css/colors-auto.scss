@@ -4,13 +4,13 @@
 @import "colors";
 
 // this mode is like colors-auto but if the device does not support 
-// @media prefers-color-scheme it will default to dark mode
+// @media prefers-color-scheme it will default to light mode
 :root {
-    @include colors;
-    @include dark-colors;
-    @include code-highlights;
-    @include highlights-dark;
-  }
+  @include colors;
+  @include light-colors;
+  @include code-highlights;
+  @include highlights-light;
+}
 
 @media screen and (prefers-color-scheme: dark) {
   :root{

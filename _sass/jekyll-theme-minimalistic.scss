@@ -89,7 +89,7 @@ ul.link a:hover, a:focus {
 }
 
 ul.content {
-  margin-left: -1.4em;
+  margin-left: -1em;
 }
 
 .sublist {
@@ -226,7 +226,7 @@ kbd {
 }
 
 .sidebar {
-  width: 250px;
+  width: 260px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -311,7 +311,7 @@ hr {
   }
 }
 
-@media print, screen and (max-width: 720px) {
+@media print, screen and (max-width: 1350px) {
   body {
     word-wrap: break-word;
   }

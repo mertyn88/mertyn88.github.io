@@ -1,6 +1,6 @@
 ---
 layout: index
-title: "Liam"
+title: "About Me"
 ---
 
 **경력 10년차 개발자** 입니다. 검색서비스 관련 업무를 하고 있습니다.  

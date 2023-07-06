@@ -13,9 +13,6 @@
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ site.github.url }}/assets/libs/bootstrap/bootstrap.min.css">
-    <!--
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
-  -->
   <link rel="apple-touch-icon" sizes="152x152" href="{{ site.github.url }}/assets/apple-icon-152x152.png">
   <link rel="shortcut icon" href="{{ site.github.url }}/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,8 +21,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.github.url }}{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
   <link rel="stylesheet" href="{{ site.github.url }}{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  
+  <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
+
 </head>
   <body>
+  <!-- Password check -->
+  <script>promptPassword();</script>
   <div class="wrapper">
       <div class="sidebar">
           <header>
@@ -38,26 +40,7 @@
       </div>
       <section>
           <div class="col-lg-8 mx-auto p-3 py-md-5">
-              <!-- 자기소개 -->
-              {% include aboutme.html %}
-              <!-- 경험 -->
-              {% include experience.html %}
-              <!-- 기술 스택 -->
-              {% include skills.html %}
-              <div id="id_achievement">
-                  <!-- 주요 성과 - 하나투어 -->
-                  {% include achievement_hanatour.html %}
-                  <!-- 주요 성과 - 라이픽 -->
-                  {% include achievement_lific.html %}
-                  <!-- 주요 성과 - 홈플러스 -->
-                  {% include achievement_homeplus.html %}
-                  <!-- 주요 성과 - wisenut -->
-                  {% include achievement_wisenut.html %}
-              </div>
-              <!-- 업데이트 내역 -->
-              {% include history.html %}
-              <!-- footer -->
-              {% include footer.html %}
+             {{ content }}
           </div>
       </section>
       <footer>

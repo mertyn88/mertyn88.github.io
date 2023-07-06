@@ -9,6 +9,17 @@
     * ElasticSearch Version : <b>7.13.4</b>
     * Oracle : <b>Unkown</b>
 
+
+- layout: left
+  name: 자동완성 개선 Batch, API 개발
+  link: hanatour-suggest.html
+  github:
+  quote: >
+    통합검색 입력시 자동완성 노출 프로세스 개발
+  description: |
+    * 지역 영역, 호텔 영역, 사용자 로그 영역으로 구분
+    * 초성검색, 한글영문변환 검색
+
 - layout: left
   name: 연관검색어 서비스 배치 개발
   link: /projects/하나투어_연관검색어.pdf
@@ -30,4 +41,3 @@
   description: |
     * 화이트 / 블랙 리스트 구분
     * 학습된 연관검색어를 색인시, 화이트 / 블랙 리스트에 따라서 색인 단어 컨트롤
-
