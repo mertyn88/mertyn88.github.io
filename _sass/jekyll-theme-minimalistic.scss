@@ -141,7 +141,12 @@ blockquote {
 
 code, pre {
   font-family: Consolas, Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color: var(--clr-code-text);
+  // color: var(--clr-code-text);
+  // 블록 코드 색상 변경
+  color: #191D6A;
+  background-color: #f0d299;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
 }
 
 pre {
@@ -311,7 +316,7 @@ hr {
   }
 }
 
-@media print, screen and (max-width: 1350px) {
+@media print, screen and (max-width: 1600px) {
   body {
     word-wrap: break-word;
   }

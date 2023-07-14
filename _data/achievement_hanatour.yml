@@ -9,6 +9,15 @@
     * ElasticSearch Version : <b>7.13.4</b>
     * Oracle : <b>Unkown</b>
 
+- layout: left
+  name: 클릭로그 실시간 ES 연동
+  link: hanatour-realtime-log.html
+  github:
+  quote: >
+    클릭로그에 대한 준실시간 로그 클러스터 색인 프로세스 구축
+  description: |
+    * Ingest pipeline의 Painless script로 processor 작성
+    * Spring @KafkaListener로 Consumer daemon 개발
 
 - layout: left
   name: 자동완성 개선 Batch, API 개발
