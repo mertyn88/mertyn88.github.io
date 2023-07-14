@@ -11,7 +11,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ site.github.url }}/assets/libs/bootstrap/bootstrap.min.css">
     <!--
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
@@ -24,6 +24,29 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.github.url }}{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
   <link rel="stylesheet" href="{{ site.github.url }}{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+  <script src="{{ "/assets/js/common.js" | relative_url }}"></script>
+
+  <script type="text/javascript">
+    (function() {
+        emailjs.init(readKeyFile()); //please encrypted user id for malicious attacks
+    })();
+
+    //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+    var templateParams = {
+        previous_page: document.referrer,
+        send_date: currentDate(),
+        message: '블로그를 방문했습니다.'
+    };
+
+    emailjs.send('hs_gmail', 'template_v4f6qbh', templateParams)
+        .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+        console.log('FAILED...', error);
+        });
+  </script>
 </head>
   <body>
   <div class="wrapper">
