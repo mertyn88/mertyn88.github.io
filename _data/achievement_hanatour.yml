@@ -10,6 +10,16 @@
     * Oracle : <b>Unkown</b>
 
 - layout: left
+  name: 여행정보 AI 서비스 구축
+  link: hanatour-hanachat.html
+  github:
+  quote: >
+    ChatGPT와 연동하여 질의/응답 챗봇 서비스 구축
+  description: |
+    * OpenAI 연동
+    * 여행 질문 필터 로직 구현
+
+- layout: left
   name: 클릭로그 실시간 ES 연동
   link: hanatour-realtime-log.html
   github:
@@ -39,14 +49,3 @@
   description: | 
     * Key-BERT를 사용하여 상품의 주제 키워드를 추출하고 연관성 도출
     * BoW(Bag of Word)로 순서가 없는 빈도(Frequency)로 특정점수(0.2) 이상의 데이터만 후보군으로 산출
-
-
-- layout: left
-  name: 연관검색어 서비스 어드민 메뉴 개발
-  link: 
-  github:
-  quote: >
-    연관검색어 서비스에서 수동으로 등록되는 단어 조절
-  description: |
-    * 화이트 / 블랙 리스트 구분
-    * 학습된 연관검색어를 색인시, 화이트 / 블랙 리스트에 따라서 색인 단어 컨트롤
