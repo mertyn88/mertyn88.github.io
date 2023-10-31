@@ -41,7 +41,8 @@
 
 - layout: left
   name: 연관검색어 서비스 배치 개발
-  link: /projects/하나투어_연관검색어.pdf
+  link: hanatour-related-keyword.html
+  # link: /projects/하나투어_연관검색어.pdf
   github: 
   drawio: /projects/하나투어_연관검색어.drawio.png
   quote: >
