@@ -17,19 +17,9 @@ git commit -m "$(date +%Y).$(date +%m).$(date +%d)"
 # push
 git push --set-upstream origin $branch_name
 
-# master merge
-git checkout master
-git merge $branch_name
-
-# push master
-git push --set-upstream origin master
-
 # gh-pages merge
 git checkout gh-pages
 git merge $branch_name
 
 # push gh-pages
 git push --set-upstream origin gh-pages
-
-# checkout master
-git checkout master
