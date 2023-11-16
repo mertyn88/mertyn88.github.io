@@ -14,7 +14,7 @@
   link: hanatour-hanachat.html
   github:
   quote: >
-    ChatGPT와 연동하여 질의/응답 챗봇 서비스 구축
+    ChatGPT와 연동하여 질의/응답 대화형 인공지능 서비스 구축
   description: |
     * OpenAI 연동
     * 여행 질문 필터 로직 구현
