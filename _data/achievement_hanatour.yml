@@ -14,10 +14,14 @@
   link: hanatour-hanachat.html
   github:
   quote: >
-    OpenAI/GCP(Google Cloud Platform)과 연동하여 질의/응답 대화형 인공지능 서비스 구축
+    OpenAI와 연동하여 질의/응답 생산형 AI 서비스 구축
   description: |
     * OpenAI 연동
-    * 여행 질문 필터 로직 구현
+    * 여행 질문 필터
+      * Step 1. White/Black list
+      * Step 2. System message tunning
+      * Step 3. 
+
 
 - layout: left
   name: 클릭로그 실시간 ES 연동
