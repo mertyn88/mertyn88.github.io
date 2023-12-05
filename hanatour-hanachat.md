@@ -37,9 +37,6 @@ layout: project-layout
 
 ![Untitled](./projects/images/%EC%97%AC%ED%96%89%EC%A0%95%EB%B3%B4AI_2.png)
 
-### 순서도
-
-![Untitled](./projects/images/%EC%97%AC%ED%96%89%EC%A0%95%EB%B3%B4AI_3.png)
 
 ### Phase 1. OpenAI 연동
 
