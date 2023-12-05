@@ -20,7 +20,8 @@
     * 여행 질문 필터
       * Step 1. White/Black list
       * Step 2. System message tunning
-      * Step 3. 
+      * Step 3. 대화 관련성 분석
+    * 상품추천 Vector 검색
 
 
 - layout: left
