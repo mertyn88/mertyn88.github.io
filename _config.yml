@@ -27,8 +27,6 @@ navigation:
   - name: Achievement
     link: ./index.html#id_achievement
     sublist:
-      - name: Hanatour
-        link: ./index.html#id_hanatour
       - name: Lific
         link: ./index.html#id_lific
       - name: Homeplus
