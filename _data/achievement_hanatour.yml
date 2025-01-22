@@ -1,0 +1,57 @@
+- layout: left
+  name: 개발 환경
+  link:
+  quote: >
+    프로젝트 개발 Version
+  description: |
+    * Java Version : <b>1.8</b>
+    * Python Version : <b>3.9</b>
+    * ElasticSearch Version : <b>7.13.4</b>
+    * Oracle : <b>Unkown</b>
+
+- layout: left
+  name: 여행정보 AI 서비스 구축
+  link: hanatour-hanachat.html
+  github:
+  quote: >
+    OpenAI와 연동하여 질의/응답 생산형 AI 서비스 구축
+  description: |
+    * OpenAI 연동
+    * 여행 질문 필터
+      * Step 1. White/Black list
+      * Step 2. System message tunning
+      * Step 3. 대화 관련성 분석
+    * 상품추천 Vector 검색
+
+
+- layout: left
+  name: 클릭로그 실시간 ES 연동
+  link: hanatour-realtime-log.html
+  github:
+  quote: >
+    클릭로그에 대한 준실시간 로그 클러스터 색인 프로세스 구축
+  description: |
+    * Ingest pipeline의 Painless script로 processor 작성
+    * Spring @KafkaListener로 Consumer daemon 개발
+
+- layout: left
+  name: 자동완성 개선 Batch, API 개발
+  link: hanatour-suggest.html
+  github:
+  quote: >
+    통합검색 입력시 자동완성 노출 프로세스 개발
+  description: |
+    * 지역 영역, 호텔 영역, 사용자 로그 영역으로 구분
+    * 초성검색, 한글영문변환 검색
+
+- layout: left
+  name: 연관검색어 서비스 배치 개발
+  link: hanatour-related-keyword.html
+  # link: /projects/하나투어_연관검색어.pdf
+  github: 
+  drawio: /projects/하나투어_연관검색어.drawio.png
+  quote: >
+    검색로그와 상품 데이터 매칭을 통해 연관검색어 서비스 구축
+  description: | 
+    * Key-BERT를 사용하여 상품의 주제 키워드를 추출하고 연관성 도출
+    * BoW(Bag of Word)로 순서가 없는 빈도(Frequency)로 특정점수(0.2) 이상의 데이터만 후보군으로 산출
