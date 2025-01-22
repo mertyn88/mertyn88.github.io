@@ -8,4 +8,4 @@ title: "Liam`s portfolio"
 
 
 ---
-`#Java`, `#Python`, `#Elasticsearch`, `#TEST Action`
+`#Java`, `#Python`, `#Elasticsearch`
